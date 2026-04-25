@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ============================================================
+         ✏️ SEO — BASIC META TAGS
+         Change title, description, keywords to match your profile
+         ============================================================ -->
+    <title>Muhammad Shafay Siddiqui | Java Developer & CS Student | Sukkur IBA</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="description" content="Muhammad Shafay Siddiqui — CS Student at Sukkur IBA University. Java Software Developer skilled in MySQL, Python, Machine Learning, HTML, CSS, JavaScript, MongoDB. Open to internships and job opportunities."/>
+    <meta name="keywords" content="Muhammad Shafay Siddiqui, Java Developer, CS Student, Sukkur IBA, Software Developer, Machine Learning, Python, MySQL, MongoDB, Web Developer, Portfolio, Pakistan, Internship"/>
+    <meta name="author" content="Muhammad Shafay Siddiqui"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://muhammadshafaysiddiqui.netlify.app/"/>
+    
+    <meta name="google-site-verification" content="K9S9YC2J7zQDM2dsrhu01AEzm52WZZSCYnqY4E0FHKg" />
+
+    <!-- ============================================================
+         ✏️ SEO — OPEN GRAPH (for WhatsApp, Facebook, LinkedIn preview)
+         Change og:url to your actual live website link
+         ============================================================ -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://muhammadshafaysiddiqui.netlify.app/"/>
+    <meta property="og:title" content="Muhammad Shafay Siddiqui | Java Developer & CS Student"/>
+    <meta property="og:description" content="CS Student at Sukkur IBA University. Java Software Developer skilled in MySQL, Python, Machine Learning, MongoDB & Web Development. Open to internships."/>
+    <meta property="og:image" content="https://muhammadshafaysiddiqui.netlify.app/mypic.jpeg"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:site_name" content="Shafay Siddiqui Portfolio"/>
+
+    <!-- ============================================================
+         ✏️ SEO — TWITTER CARD (for Twitter/X preview)
+         ============================================================ -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Muhammad Shafay Siddiqui | Java Developer & CS Student"/>
+    <meta name="twitter:description" content="CS Student at Sukkur IBA University. Java Developer, Python, ML, MongoDB, Web Dev. Open to internships."/>
+    <meta name="twitter:image" content="https://muhammadshafaysiddiqui.netlify.app/mypic.jpeg"/>
+
+    <!-- ============================================================
+         ✏️ SEO — SCHEMA (Google rich results — shows your info in search)
+         ============================================================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Muhammad Shafay Siddiqui",
+      "url": "https://muhammadshafaysiddiqui.netlify.app",
+      "image": "https://muhammadshafaysiddiqui.netlify.app/mypic.jpeg",
+      "jobTitle": "CS Student & Java Software Developer",
+      "description": "Computer Science student at Sukkur IBA University specializing in Java development, MySQL, Python, Machine Learning, and Web Development.",
+      "email": "siddiquimuhammadshafay@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sukkur",
+        "addressCountry": "PK"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Sukkur IBA University"
+      },
+      "knowsAbout": ["Java", "MySQL", "Python", "Machine Learning", "MongoDB", "HTML", "CSS", "JavaScript", "Data Structures", "OOP"],
+      "sameAs": [
+        "https://github.com/siddiquimuhammadshafay",
+        "https://www.linkedin.com/in/mshafaysiddiqui"
+      ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <style>
+        :root {
+            --bg:         #07090f;
+            --bg2:        #0d1117;
+            --bg3:        #111926;
+            --card:       #0d1520;
+            --border:     #1a2a3a;
+            --accent:     #00ffe0;
+            --accent2:    #00aaff;
+            --accent3:    #7b2fff;
+            --text:       #cdd9e5;
+            --text-dim:   #649dce;
+            --text-bright:#f0f6fc;
+            --mono:       'Share Tech Mono', monospace;
+            --sans:       'Syne', sans-serif;
+            --radius:     12px;
+            --transition: 0.3s ease;
+            --glow:       0 0 24px rgba(0,255,224,0.5);
+            --glow2:      0 0 40px rgba(0,170,255,0.15);
+        }
+
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+        html{scroll-behavior:smooth;font-size:16px;}
+        body{background:var(--bg);color:var(--text);font-family:var(--sans);overflow-x:hidden;line-height:1.7;}
+        a{color:var(--accent);text-decoration:none;transition:color var(--transition);}
+        a:hover{color:var(--accent2);}
+        img{max-width:100%;display:block;}
+        ul{list-style:none;}
+
+        body::before{content:'';position:fixed;inset:0;z-index:0;background-image:linear-gradient(rgba(0,255,224,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,224,0.025) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;}
+
+        ::-webkit-scrollbar{width:5px;}
+        ::-webkit-scrollbar-track{background:var(--bg);}
+        ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
+
+        .container{max-width:1100px;margin:0 auto;padding:0 2rem;}
+        .section{padding:100px 0;position:relative;z-index:1;}
+        .section-label{font-family:var(--mono);font-size:0.75rem;color:var(--accent);letter-spacing:0.2em;margin-bottom:0.5rem;}
+        .section-title{font-size:clamp(2rem,4vw,2.8rem);font-weight:800;color:var(--text-bright);margin-bottom:1rem;line-height:1.15;}
+        .section-title span{color:var(--accent);}
+        .section-line{width:60px;height:3px;background:linear-gradient(90deg,var(--accent),transparent);margin-bottom:3rem;border-radius:2px;}
+
+        .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.75rem;border-radius:6px;font-family:var(--mono);font-size:0.85rem;letter-spacing:0.05em;cursor:pointer;transition:all var(--transition);border:none;}
+        .btn-primary{background:var(--accent);color:#000;font-weight:700;}
+        .btn-primary:hover{background:transparent;color:var(--accent);box-shadow:0 0 0 1.5px var(--accent),var(--glow);}
+        .btn-outline{background:transparent;color:var(--accent);box-shadow:0 0 0 1.5px var(--accent);}
+        .btn-outline:hover{background:var(--accent);color:#000;box-shadow:var(--glow);}
+
+        .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+        .reveal.visible{opacity:1;transform:none;}
+
+        /* NAVBAR */
+        nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:68px;background:rgba(7,9,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:box-shadow var(--transition);}
+        nav.scrolled{box-shadow:0 4px 30px rgba(0,0,0,0.6);}
+        .nav-logo{font-family:var(--mono);font-size:1.1rem;color:var(--accent);letter-spacing:0.05em;}
+        .nav-logo span{color:var(--text-dim);}
+        .nav-links{display:flex;align-items:center;gap:2.5rem;}
+        .nav-links a{font-family:var(--mono);font-size:1rem;color:var(--text-dim);letter-spacing:0.1em;text-transform:uppercase;position:relative;}
+        .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--accent);transition:width var(--transition);}
+        .nav-links a:hover{color:var(--accent);}
+        .nav-links a:hover::after{width:100%;}
+        .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+        .hamburger span{display:block;width:24px;height:2px;background:var(--accent);transition:all var(--transition);border-radius:2px;}
+        .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+        .hamburger.open span:nth-child(2){opacity:0;}
+        .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+        .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;z-index:999;background:rgba(7,9,15,0.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:1.5rem 2rem;flex-direction:column;gap:1.2rem;}
+        .mobile-menu.open{display:flex;}
+        .mobile-menu a{font-family:var(--mono);font-size:0.88rem;color:var(--text-dim);letter-spacing:0.1em;text-transform:uppercase;padding:0.5rem 0;border-bottom:1px solid var(--border);transition:color var(--transition);}
+        .mobile-menu a:hover{color:var(--accent);}
+
+        /* HERO */
+        #hero{min-height:100vh;display:flex;align-items:center;padding-top:68px;position:relative;overflow:hidden;}
+        #hero::before{content:'';position:absolute;top:15%;left:-8%;width:520px;height:520px;background:radial-gradient(circle,rgba(0,255,224,0.055) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
+        #hero::after{content:'';position:absolute;bottom:5%;right:-5%;width:420px;height:420px;background:radial-gradient(circle,rgba(0,170,255,0.055) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
+        .hero-inner{display:grid;grid-template-columns:1fr auto;align-items:center;gap:4rem;width:100%;position:relative;z-index:1;}
+        .hero-tag{font-family:var(--mono);font-size:0.78rem;color:var(--accent);letter-spacing:0.2em;margin-bottom:1.2rem;display:flex;align-items:center;gap:0.75rem;}
+        .hero-tag::before{content:'';width:28px;height:1.5px;background:var(--accent);}
+        .hero-name{font-size:clamp(2.2rem,5vw,4rem);font-weight:800;color:var(--text-bright);line-height:1.1;margin-bottom:0.75rem;}
+        .hero-name span{color:var(--accent);}
+        .hero-subtitle{font-family:var(--mono);font-size:clamp(0.9rem,2vw,1.2rem);color:var(--text-dim);margin-bottom:1.5rem;min-height:1.8rem;}
+        .hero-subtitle .typed{color:var(--accent2);}
+        .cursor-blink{display:inline-block;width:2px;height:1em;background:var(--accent);vertical-align:middle;margin-left:2px;animation:blink 1s step-end infinite;}
+        @keyframes blink{50%{opacity:0;}}
+        .hero-tagline{font-size:0.97rem;color:var(--text-dim);max-width:480px;margin-bottom:2.5rem;line-height:1.85;}
+        .hero-btns{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;}
+        .hero-socials{display:flex;gap:1rem;align-items:center;}
+        .hero-socials a{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--border);border-radius:8px;color:var(--text-dim);font-size:0.9rem;transition:all var(--transition);}
+        .hero-socials a:hover{border-color:var(--accent);color:var(--accent);box-shadow:var(--glow);}
+
+        .hero-photo-wrap{position:relative;flex-shrink:0;}
+        .hero-photo-wrap::before{content:'';position:absolute;inset:-3px;border-radius:50%;background:conic-gradient(var(--accent),var(--accent2),var(--accent3),var(--accent));animation:spin 6s linear infinite;z-index:0;}
+        @keyframes spin{to{transform:rotate(360deg);}}
+        .hero-photo-wrap::after{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--bg);z-index:1;}
+        .hero-photo{position:relative;z-index:2;width:230px;height:230px;border-radius:50%;overflow:hidden;background:var(--bg3);display:flex;align-items:center;justify-content:center;}
+
+        .scroll-indicator{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.62rem;color:var(--text-dim);letter-spacing:0.15em;animation:floatY 2.5s ease-in-out infinite;}
+        @keyframes floatY{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-8px)}}
+        .scroll-indicator i{color:var(--accent);font-size:0.9rem;}
+
+        /* ABOUT */
+        #about{background:var(--bg2);}
+        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+        .about-text p{color:var(--text);font-size:0.96rem;line-height:1.9;margin-bottom:1.1rem;}
+        .about-text p span{color:var(--accent);font-family:var(--mono);}
+        .about-info{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem;}
+        .info-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;transition:border-color var(--transition);}
+        .info-item:hover{border-color:var(--accent);}
+        .info-item .label{font-family:var(--mono);font-size:0.63rem;color:var(--accent);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.3rem;}
+        .info-item .value{font-size:0.87rem;color:var(--text-bright);font-weight:600;}
+        .about-stats{display:flex;flex-direction:column;gap:1.3rem;}
+        .stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;transition:all var(--transition);position:relative;overflow:hidden;}
+        .stat-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--accent),transparent);}
+        .stat-card:hover{border-color:var(--accent);transform:translateX(5px);box-shadow:var(--glow);}
+        .stat-card .stat-icon{font-size:1.4rem;color:var(--accent);margin-bottom:0.6rem;}
+        .stat-card .stat-title{font-weight:700;font-size:0.95rem;color:var(--text-bright);margin-bottom:0.25rem;}
+        .stat-card .stat-desc{font-size:0.8rem;color:var(--text-dim);font-family:var(--mono);line-height:1.6;}
+
+        /* SKILLS */
+        #skills{background:var(--bg);}
+        .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+        .skill-category{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.8rem;transition:all var(--transition);}
+        .skill-category:hover{border-color:var(--accent);box-shadow:var(--glow);}
+        .skill-category-title{font-family:var(--mono);font-size:0.72rem;color:var(--accent);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:1.2rem;display:flex;align-items:center;gap:0.6rem;}
+        .skill-category-title i{font-size:1rem;}
+        .skill-tags{display:flex;flex-wrap:wrap;gap:0.6rem;}
+        .skill-tag{background:rgba(0,255,224,0.05);border:1px solid rgba(0,255,224,0.14);color:var(--text);font-family:var(--mono);font-size:0.75rem;padding:0.35rem 0.75rem;border-radius:4px;transition:all var(--transition);letter-spacing:0.04em;}
+        .skill-tag:hover{background:rgba(0,255,224,0.12);border-color:var(--accent);color:var(--accent);cursor:default;}
+
+        /* PROJECTS */
+        #projects{background:var(--bg2);}
+        .projects-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:1rem;}
+        .projects-note{font-family:var(--mono);font-size:0.75rem;color:var(--text-dim);}
+        .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;}
+        .project-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.8rem;display:flex;flex-direction:column;gap:1rem;transition:all var(--transition);position:relative;overflow:hidden;}
+        .project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity var(--transition);}
+        .project-card:hover{border-color:var(--accent);transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.45),var(--glow);}
+        .project-card:hover::before{opacity:1;}
+        .project-top{display:flex;justify-content:space-between;align-items:flex-start;}
+        .project-icon{font-size:1.6rem;color:var(--accent);}
+        .project-links-top{display:flex;gap:0.8rem;}
+        .project-links-top a{color:var(--text-dim);font-size:1rem;transition:color var(--transition);}
+        .project-links-top a:hover{color:var(--accent);}
+        .project-title{font-size:1.05rem;font-weight:700;color:var(--text-bright);}
+        .project-desc{font-size:0.84rem;color:var(--text-dim);line-height:1.75;flex:1;}
+        .project-tags{display:flex;flex-wrap:wrap;gap:0.5rem;}
+        .project-tag{background:rgba(0,170,255,0.08);border:1px solid rgba(0,170,255,0.2);color:var(--accent2);font-family:var(--mono);font-size:0.68rem;padding:0.25rem 0.6rem;border-radius:4px;letter-spacing:0.04em;}
+
+        /* EDUCATION */
+        #education{background:var(--bg);}
+        .education-layout{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+        .edu-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;transition:all var(--transition);position:relative;overflow:hidden;}
+        .edu-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent);opacity:0;transition:opacity var(--transition);}
+        .edu-card:hover{border-color:var(--accent);box-shadow:var(--glow);}
+        .edu-card:hover::after{opacity:1;}
+        .edu-badge{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--mono);font-size:0.63rem;color:var(--accent);background:rgba(0,255,224,0.07);border:1px solid rgba(0,255,224,0.18);padding:0.3rem 0.75rem;border-radius:4px;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.2rem;}
+        .edu-degree{font-size:1.08rem;font-weight:700;color:var(--text-bright);margin-bottom:0.3rem;}
+        .edu-uni{font-family:var(--mono);font-size:0.8rem;color:var(--accent2);margin-bottom:0.4rem;}
+        .edu-year{font-family:var(--mono);font-size:0.75rem;color:var(--text-dim);margin-bottom:1.3rem;}
+        .edu-courses-title{font-family:var(--mono);font-size:0.63rem;color:var(--text-dim);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.75rem;}
+        .edu-courses{display:flex;flex-wrap:wrap;gap:0.5rem;}
+        .edu-course{background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:var(--mono);font-size:0.72rem;padding:0.28rem 0.65rem;border-radius:4px;}
+        .cert-list{display:flex;flex-direction:column;gap:0.85rem;}
+        .cert-item{display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.1rem;background:var(--bg3);border:1px solid var(--border);border-radius:8px;transition:border-color var(--transition);}
+        .cert-item:hover{border-color:var(--accent);}
+        .cert-item i{color:var(--accent);font-size:1.1rem;margin-top:2px;flex-shrink:0;}
+        .cert-item .cert-name{font-size:0.87rem;color:var(--text-bright);font-weight:600;margin-bottom:0.15rem;}
+        .cert-item .cert-issuer{font-family:var(--mono);font-size:0.71rem;color:var(--text-dim);}
+
+        /* CONTACT */
+        #contact{background:var(--bg2);}
+        .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;align-items:start;}
+        .contact-info-title{font-size:1.2rem;font-weight:700;color:var(--text-bright);margin-bottom:0.75rem;}
+        .contact-info-desc{font-size:0.88rem;color:var(--text-dim);line-height:1.85;margin-bottom:2rem;}
+        .contact-items{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;}
+        .contact-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:var(--card);border:1px solid var(--border);border-radius:8px;transition:all var(--transition);}
+        .contact-item:hover{border-color:var(--accent);box-shadow:var(--glow);}
+        .ci-icon{width:36px;height:36px;background:rgba(0,255,224,0.07);border:1px solid rgba(0,255,224,0.18);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:0.88rem;flex-shrink:0;}
+        .ci-label{font-family:var(--mono);font-size:0.63rem;color:var(--text-dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.15rem;}
+        .ci-value{font-size:0.87rem;color:var(--text-bright);font-weight:600;}
+        .social-links{display:flex;gap:0.75rem;flex-wrap:wrap;}
+        .social-link{display:flex;align-items:center;gap:0.5rem;padding:0.55rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:6px;font-family:var(--mono);font-size:0.75rem;color:var(--text-dim);transition:all var(--transition);}
+        .social-link:hover{border-color:var(--accent);color:var(--accent);box-shadow:var(--glow);}
+        .contact-form{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;}
+        .form-title{font-family:var(--mono);font-size:0.7rem;color:var(--accent);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.5rem;}
+        .form-group{margin-bottom:1.15rem;}
+        .form-group label{display:block;font-family:var(--mono);font-size:0.68rem;color:var(--text-dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.45rem;}
+        .form-group input,.form-group textarea{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:0.8rem 1rem;color:var(--text-bright);font-family:var(--mono);font-size:0.85rem;outline:none;transition:border-color var(--transition),box-shadow var(--transition);resize:vertical;}
+        .form-group input::placeholder,.form-group textarea::placeholder{color:var(--text-dim);}
+        .form-group input:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,255,224,0.07);}
+        .form-group textarea{min-height:120px;}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+        .form-submit{width:100%;justify-content:center;padding:0.9rem;}
+        .form-note{font-family:var(--mono);font-size:0.68rem;color:var(--text-dim);text-align:center;margin-top:0.75rem;min-height:1.2rem;}
+
+        /* FOOTER */
+        footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 0;position:relative;z-index:1;}
+        .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+        .footer-copy{font-family:var(--mono);font-size:0.73rem;color:var(--text-dim);}
+        .footer-copy span{color:var(--accent);}
+        .footer-links{display:flex;gap:1.5rem;}
+        .footer-links a{font-family:var(--mono);font-size:0.71rem;color:var(--text-dim);letter-spacing:0.07em;transition:color var(--transition);}
+        .footer-links a:hover{color:var(--accent);}
+        #back-top{position:fixed;bottom:2rem;right:2rem;z-index:500;width:42px;height:42px;background:var(--accent);border:none;border-radius:6px;color:#000;font-size:1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:all var(--transition);box-shadow:var(--glow);}
+        #back-top.visible{opacity:1;pointer-events:all;}
+        #back-top:hover{transform:translateY(-3px);}
+
+        /* RESPONSIVE */
+        @media(max-width:900px){
+            nav{padding:0 1.5rem;}
+            .nav-links{display:none;}
+            .hamburger{display:flex;}
+            .hero-inner{grid-template-columns:1fr;text-align:center;gap:2.5rem;}
+            .hero-text{order:2;}
+            .hero-photo-wrap{order:1;margin:0 auto;}
+            .hero-tag{justify-content:center;}
+            .hero-btns{justify-content:center;}
+            .hero-socials{justify-content:center;}
+            .hero-tagline{margin:0 auto 2.5rem;}
+            .about-grid{grid-template-columns:1fr;gap:2.5rem;}
+            .skills-grid{grid-template-columns:1fr 1fr;}
+            .education-layout{grid-template-columns:1fr;}
+            .contact-grid{grid-template-columns:1fr;}
+            .form-row{grid-template-columns:1fr;}
+        }
+        @media(max-width:600px){
+            .container{padding:0 1.2rem;}
+            .section{padding:72px 0;}
+            .hero-photo{width:175px;height:175px;}
+            .hero-name{font-size:2rem;}
+            .hero-btns{flex-direction:column;align-items:center;}
+            .skills-grid{grid-template-columns:1fr;}
+            .projects-grid{grid-template-columns:1fr;}
+            .about-info{grid-template-columns:1fr;}
+            .footer-inner{flex-direction:column;align-items:center;text-align:center;}
+            .footer-links{flex-wrap:wrap;justify-content:center;}
+            .social-links{justify-content:flex-start;}
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="nav-logo">shafay<span>.dev</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#about"     class="mobile-link">About</a>
+        <a href="#skills"    class="mobile-link">Skills</a>
+        <a href="#projects"  class="mobile-link">Projects</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#contact"   class="mobile-link">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-text reveal">
+                    <div class="hero-tag">Open to Jobs & Internships</div>
+                    <h1 class="hero-name">Muhammad<br><span>Shafay Siddiqui</span></h1>
+                    <div class="hero-subtitle">
+                        &gt;&nbsp;I am a&nbsp;<span class="typed" id="typed-text"></span><span class="cursor-blink"></span>
+                    </div>
+                    <p class="hero-tagline">
+                        A passionate Computer Science student at Sukkur IBA University — building real-world
+                        software with Java, exploring Machine Learning, and crafting responsive web experiences.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary"><i class="fa fa-code"></i>&nbsp;View Projects</a>
+                        <a href="RESUME_M.SHAFAY.SIDDIQUI.pdf" class="btn btn-outline" download><i class="fa fa-download"></i>&nbsp;Download CV</a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://github.com/siddiquimuhammadshafay" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mshafaysiddiqui" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://mail.google.com/mail/?view=cm&to=siddiquimuhammadshafay@gmail.com" target="_blank" aria-label="Email"><i class="fa fa-envelope"></i></a>
+                        <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-photo-wrap reveal">
+                    <div class="hero-photo">
+                        <!-- ✏️ EDIT: Replace with your photo -->
+                        <img src="mypic.jpg" alt="Muhammad Shafay Siddiqui - Java Developer CS Student Sukkur IBA"
+                             style="width:100%;height:100%;object-fit:cover;object-position:top center;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>SCROLL</span>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="section-line"></div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        Hey! I'm <span>Muhammad Shafay Siddiqui</span>, a Computer Science student at
+                        Sukkur IBA University with a strong passion for software development,
+                        problem solving, and building things that actually matter.
+                    </p>
+                    <p>
+                        I specialize in <span>Java desktop development</span> and have hands-on experience
+                        with <span>MySQL</span> database design. I'm currently diving deep into
+                        <span>Machine Learning</span> and expanding my skills in full-stack web development
+                        using HTML, CSS, JavaScript, and <span>MongoDB</span>.
+                    </p>
+                    <p>
+                        I'm actively looking for <span>internship and job opportunities</span> where I can
+                        contribute, grow, and turn my skills into real impact. Let's build something great together!
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <div class="label">University</div>
+                            <div class="value">Sukkur IBA University</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="label">Degree</div>
+                            <div class="value">BS Computer Science</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="label">Year</div>
+                            <div class="value">2nd Year</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="label">Status</div>
+                            <div class="value" style="color:var(--accent);">Open to Work ✦</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa fa-coffee"></i></div>
+                        <div class="stat-title">Java Developer</div>
+                        <div class="stat-desc">Building desktop software & backend systems with Java and MySQL</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa fa-brain"></i></div>
+                        <div class="stat-title">ML Explorer</div>
+                        <div class="stat-desc">Learning Machine Learning with Python, Pandas & NumPy</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa fa-globe"></i></div>
+                        <div class="stat-title">Web Developer</div>
+                        <div class="stat-desc">Crafting responsive websites with HTML, CSS, JS & MongoDB</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">My <span>Skills</span></h2>
+            <div class="section-line"></div>
+            <div class="skills-grid reveal">
+
+                <!-- ✏️ ADD: <span class="skill-tag">New Skill</span> -->
+                <div class="skill-category">
+                    <div class="skill-category-title"><i class="fa fa-code"></i> Languages</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                    </div>
+                </div>
+
+                <!-- ✏️ ADD: <span class="skill-tag">New Tool</span> -->
+                <div class="skill-category">
+                    <div class="skill-category-title"><i class="fa fa-tools"></i> Tools & Technologies</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Bootstrap</span>
+                    </div>
+                </div>
+
+                <!-- ✏️ ADD: <span class="skill-tag">New Concept</span> -->
+                <div class="skill-category">
+                    <div class="skill-category-title"><i class="fa fa-brain"></i> CS Concepts</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">Algorithms</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">Database Design</span>
+                        <span class="skill-tag">Discrete Math</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="projects-header">
+                <div>
+                    <h2 class="section-title">My <span>Projects</span></h2>
+                    <div class="section-line" style="margin-bottom:0"></div>
+                </div>
+                <div class="projects-note"> more coming soon on GitHub</div>
+            </div>
+
+            <div class="projects-grid reveal">
+
+                <!-- ✏️ COPY THIS BLOCK TO ADD A NEW PROJECT -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fa fa-cash-register"></i></div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/siddiquimuhammadshafay/Projects/tree/main/InventoryPOS" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" aria-label="Live Demo"><i class="fa fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-title">Inventory POS System</div>
+                    <div class="project-desc">
+                        A high-performance Java desktop suite for retail automation, featuring a self-configuring
+                        database engine and zero-dependency deployment for seamless Windows scalability.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">OOP</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fa fa-globe"></i></div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/siddiquimuhammadshafay" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" aria-label="Live Demo"><i class="fa fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-title">Portfolio Website</div>
+                    <div class="project-desc">
+                        A fully responsive personal portfolio with a dark techy theme, smooth animations,
+                        and all sections to showcase skills, projects, and experience.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fa fa-calculator"></i></div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/siddiquimuhammadshafay" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" aria-label="Live Demo"><i class="fa fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-title">Calculator App</div>
+                    <div class="project-desc">
+                        A fully functional web calculator with clean UI, keyboard support, chained
+                        operations, and decimal number handling.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- ✏️ NEW PROJECT TEMPLATE — Remove the comment tags and fill in:
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fa fa-star"></i></div>
+                        <div class="project-links-top">
+                            <a href="YOUR_GITHUB_LINK" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="YOUR_LIVE_LINK" target="_blank"><i class="fa fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-title">Your Project Title</div>
+                    <div class="project-desc">Your project description here.</div>
+                    <div class="project-tags">
+                        <span class="project-tag">Tag1</span>
+                        <span class="project-tag">Tag2</span>
+                    </div>
+                </div>
+                -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">My <span>Education</span></h2>
+            <div class="section-line"></div>
+            <div class="education-layout reveal">
+                <div class="edu-card">
+                    <div class="edu-badge"><i class="fa fa-graduation-cap"></i>&nbsp;Current Degree</div>
+                    <div class="edu-degree">Bachelor of Science in Computer Science</div>
+                    <div class="edu-uni">Sukkur IBA University</div>
+                    <div class="edu-year">2024 — 2028 &nbsp;·&nbsp; Expected Graduation</div>
+                    <div class="edu-courses-title">Relevant Courses</div>
+                    <div class="edu-courses">
+                        <span class="edu-course">Artificial Intelligence</span>
+                        <span class="edu-course">Machine Learning</span>
+                        <span class="edu-course">Data Structures</span>
+                        <span class="edu-course">OOP</span>
+                        <span class="edu-course">Discrete Math</span>
+                        <span class="edu-course">Database Systems</span>
+                        <span class="edu-course">Computer Networks</span>
+                        <span class="edu-course">Algorithms</span>
+                        <span class="edu-course">Operating Systems</span>
+                        <!-- ✏️ ADD: <span class="edu-course">New Course</span> -->
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-badge"><i class="fa fa-certificate"></i>&nbsp;Certifications</div>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fab fa-python"></i>
+                            <div>
+                                <div class="cert-name">Python for Everybody</div>
+                                <div class="cert-issuer">Coursera — University of Michigan</div>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fab fa-html5"></i>
+                            <div>
+                                <div class="cert-name">Responsive Web Design</div>
+                                <div class="cert-issuer">freeCodeCamp</div>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <div class="cert-name">Git &amp; GitHub Fundamentals</div>
+                                <div class="cert-issuer">GitHub Learning Lab</div>
+                            </div>
+                        </div>
+                        <!-- ✏️ ADD CERTIFICATION:
+                        <div class="cert-item">
+                            <i class="fa fa-certificate"></i>
+                            <div>
+                                <div class="cert-name">Cert Name</div>
+                                <div class="cert-issuer">Issuer</div>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <div class="section-line"></div>
+            <div class="contact-grid reveal">
+                <div>
+                    <div class="contact-info-title">Let's work together</div>
+                    <div class="contact-info-desc">
+                        I'm actively looking for internship and job opportunities in software development.
+                        Whether you have a project, an opportunity, or just want to say hi — my inbox is always open!
+                    </div>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="ci-icon"><i class="fa fa-envelope"></i></div>
+                            <div>
+                                <div class="ci-label">Email</div>
+                                <div class="ci-value">
+                                    <a href="https://mail.google.com/mail/?view=cm&to=siddiquimuhammadshafay@gmail.com"
+                                       target="_blank"
+                                       style="color:var(--text-bright);text-decoration:none;">
+                                        siddiquimuhammadshafay@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="ci-icon"><i class="fa fa-map-marker-alt"></i></div>
+                            <div>
+                                <div class="ci-label">Location</div>
+                                <div class="ci-value">Sukkur, Pakistan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/siddiquimuhammadshafay" target="_blank" class="social-link"><i class="fab fa-github"></i>&nbsp;GitHub</a>
+                        <a href="https://www.linkedin.com/in/mshafaysiddiqui" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i>&nbsp;LinkedIn</a>
+                        <a href="https://twitter.com/" target="_blank" class="social-link"><i class="fab fa-twitter"></i>&nbsp;Twitter</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <div class="form-title">// send a message</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fname">Name</label>
+                            <input type="text" id="fname" placeholder="Your name" autocomplete="off"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="femail">Email</label>
+                            <input type="email" id="femail" placeholder="your@email.com" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fsubject">Subject</label>
+                        <input type="text" id="fsubject" placeholder="What's this about?" autocomplete="off"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="fmessage">Message</label>
+                        <textarea id="fmessage" placeholder="Your message..."></textarea>
+                    </div>
+                    <button class="btn btn-primary form-submit" onclick="handleForm()">
+                        <i class="fa fa-paper-plane"></i>&nbsp;Send Message
+                    </button>
+                    <div class="form-note" id="form-note"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-copy">
+                    &copy; 2025 <span>Muhammad Shafay Siddiqui</span> &mdash; Built with HTML, CSS &amp; JS
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        /* ✏️ EDIT: Typing animation words */
+        const typedWords = [
+            "Java Developer",
+            "CS Student",
+            "ML Enthusiast",
+            "Web Developer",
+            "Problem Solver",
+            "Future Engineer"
+        ];
+
+        (function typeLoop() {
+            const el = document.getElementById('typed-text');
+            let wi = 0, ci = 0, del = false;
+            function tick() {
+                const word = typedWords[wi];
+                el.textContent = del ? word.slice(0, ci--) : word.slice(0, ci++);
+                if (!del && ci > word.length)  { del = true;  setTimeout(tick, 1500); return; }
+                if (del  && ci < 0)            { del = false; wi = (wi+1) % typedWords.length; ci = 0; }
+                setTimeout(tick, del ? 50 : 90);
+            }
+            tick();
+        })();
+
+        const navbar  = document.getElementById('navbar');
+        const backTop = document.getElementById('back-top');
+        const reveals = document.querySelectorAll('.reveal');
+
+        function onScroll() {
+            const sy = window.scrollY;
+            navbar.classList.toggle('scrolled', sy > 30);
+            backTop.classList.toggle('visible', sy > 400);
+            reveals.forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 80)
+                    el.classList.add('visible');
+            });
+        }
+        window.addEventListener('scroll', onScroll);
+        onScroll();
+
+        const hamburger  = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        function handleForm() {
+            const name    = document.getElementById('fname').value.trim();
+            const email   = document.getElementById('femail').value.trim();
+            const message = document.getElementById('fmessage').value.trim();
+            const note    = document.getElementById('form-note');
+            if (!name || !email || !message) {
+                note.style.color = '#ff6b6b';
+                note.textContent = '// Please fill in name, email, and message.';
+                return;
+            }
+            if (!/\S+@\S+\.\S+/.test(email)) {
+                note.style.color = '#ff6b6b';
+                note.textContent = '// Please enter a valid email address.';
+                return;
+            }
+            note.style.color = 'var(--accent)';
+            note.textContent = "// Message sent! I'll get back to you soon. ✦";
+            ['fname','femail','fsubject','fmessage'].forEach(id => document.getElementById(id).value = '');
+        }
+    </script>
+</body>
+</html>
